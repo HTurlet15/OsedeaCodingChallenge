@@ -1,0 +1,29 @@
+# Coding Challenge - Python/Computer Vision
+
+The following is simple coding challenge to assess some basic skills. We ask that you spend 1-2 hours on the challenge. However, do not let this limit you if you wish to spend more.
+
+The challenge is vague in order to see how you handle it, feel free to write down your thoughts/assumptions as you move through it.
+
+Please commit your work to a git repository and share it with us (robin.kurtz@osedea.com). If you're unable to do so, please provide a GitHub username, for us to create a repository on your behalf.
+
+## Practical
+
+Using docker, create one or multiple Python scripts to achieve the following tasks:
+
+1. Determine which image in `images/` contains the most edges
+2. Plot the colour channels for each image in `images/` to determine which image contains the most blue
+3. Visualise the `thermal-data.raw` file, add the temperature range (in Celsius) to the outputted image
+
+For these scripts, we would like to be able to see the results by running something like:
+
+```
+docker build -t python-vision .
+docker run -d python-vision
+```
+
+## Theory
+
+For the following, write down how you would approach the following problems:
+
+1. Using computer vision, read an analogue gauge (as photographed in `imagesDSC06071-1200x800-5b2df79.jpg`)
+2. As a bonus: using the Spot SDK documentation, determine how you display live sensor data in the Spot app
