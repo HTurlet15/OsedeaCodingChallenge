@@ -6,7 +6,6 @@ You will find in this folder 4 different scripts :
 2. blue_analyzer.py : contains a class BlueAnalyzer to plot the colour channels for each image in `images/` to determine which image contains the most blue. The result will appear in the terminal (for the most blue image) and the details will be in the folder `output/` (the color channels for each image and the histogram of quantity of blue for each image)
 3. thermal_visualizer.py : contains a class ThermalVisualizer to visualise the `thermal-data.raw` file with the temperature range (in Celsius). The outputted image will be in the folder `output/`.
 
-For these scripts, we would like to be able to see the results by running something like:*
 The results can be seen by running the commands :
 
 ```
