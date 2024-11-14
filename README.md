@@ -14,7 +14,7 @@ docker build -t python-vision .
 docker run -v $PWD/output:/app/output python-vision
 ```
 
-while being located in the folder `Coding challenge/`.
+while being located in the folder `OsedeaCodingChallenge/`.
 
 ## Theory
 
