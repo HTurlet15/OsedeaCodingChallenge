@@ -29,7 +29,7 @@ Avec l’aiguille détectée, la prochaine étape consiste à calculer son angle
 2. As a bonus: using the Spot SDK documentation, determine how you display live sensor data in the Spot app
 
 On peut récupérer les images du robot Sport assez simplement grâce aux API du robot. Grâce à la documentation et à des lignes de codes similaires à celle ci-dessous :
-
+```{python}
 from bosdyn.client import create_standard_sdk
 from bosdyn.client.robot import Robot
 from bosdyn.client.image import ImageClient
@@ -41,5 +41,6 @@ robot.authenticate('user', 'password')    # Utilisez vos identifiants
 image_client = robot.ensure_client(ImageClient.default_service_name)
 sources = image_client.list_image_sources()
 image_response = image_client.get_image_from_sources(['frontleft_fisheye_image'])  # Exemple de caméra
+```
 
 Ensuite, on peut faire une boucle sur image_response pour obtenir en continue les informations de la caméra choisie. On peut les afficher avec cv2. Pour que le flux en direct soit accessible sur le Spot App, ce flux doit être ensuite enregistré comme un service gRPC au niveau du Spot Directory Service, ce qui permet à l’application Spot de découvrir et accéder au service. Cela marche aussi pour d'autres types de data, ici j'ai pris l'exemple de la caméra avant gauche (en fisheye), mais ce serait la même chose avec la batterie ou autre.
